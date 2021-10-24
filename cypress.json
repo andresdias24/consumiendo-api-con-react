@@ -1,0 +1,11 @@
+{
+    "chromeWebSecurity": true,
+    "projectId": "yx5ye3",
+    "supportFile": false,
+    "fixturesFolder": false,
+    "video": false,
+    "component": {
+      "componentFolder": "src",
+      "testFiles": "**/*spec.{js,jsx,ts,tsx}"
+    }
+  }

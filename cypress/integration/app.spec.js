@@ -14,8 +14,9 @@ describe('orquesta de pruebas para el home', () => {
 
   describe('My Component', () => {
     it('should respond to click on button with warning', () => {
-      cy.visit('http://localhost:6006/iframe.html?id=example-button--primary');
-      cy.get('.storybook-button').should('be.visible');
+      cy.visit('http://localhost:6006/iframe.html?id=components-button--red');
+      cy.get('button').contains('Press Me')
+      cy.get('button').should('have.text', 'Press Me');
     });
   })
 

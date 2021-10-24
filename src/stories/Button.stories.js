@@ -11,21 +11,21 @@ const Template = args => <Button {...args} />
 export const Red = Template.bind({})
 Red.args = {
   backgroundColor: "red",
-  label: "Press Me",
+  label: "Press",
   size: "md",
 }
 
 export const Green = Template.bind({})
 Green.args = {
   backgroundColor: "green",
-  label: "Press Me",
+  label: "Press M",
   size: "md",
 }
 
 export const Small = Template.bind({})
 Small.args = {
   backgroundColor: "red",
-  label: "Press Me",
+  label: "Press",
   size: "sm",
 }
 

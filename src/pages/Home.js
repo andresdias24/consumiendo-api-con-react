@@ -1,16 +1,12 @@
 import React from "react";
-import Nav  from "../components/Nav";
-import Button from "../components/Button";
-import Cart from "../components/Cart";
+import Nav  from "../components/Nav/Nav";
 
-const Home = (req, res) => {
+const  Home = ()  => {
     return(
-        <>
+        <div>
             <Nav />
-            <h2>pahina donde se mostraran las categorias</h2>
-            <Button label="clic sobre mi" backgroundColor="red" />
-            <Cart />
-        </>
+            <h2>pagina principal </h2>
+        </div>
     )
 }
 

@@ -4,7 +4,7 @@ import queryString from 'query-string'
 export const getVideogames = async () => {
   try {
         const response = await fetch(
-            `${API}/paquete/paquetes`,
+            `${API}/pedido/pedidos`,
             {
                 method: 'GET'
             }
@@ -17,7 +17,7 @@ export const getVideogames = async () => {
 }
 
 export const read = (videogameId) => {
-  return fetch(`${API}/paquete/${videogameId}`, {
+  return fetch(`${API}/pedido/${videogameId}`, {
     method: "GET"
   }).then(response => {
     return response.json();

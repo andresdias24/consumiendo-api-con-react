@@ -11,13 +11,16 @@ const Packs = () => {
 
     const loadVideoGames = () => {
         getVideogames().then(data => {
+            console.log("😆👽🕳👨‍💻 🧬 ~ file: Paquetes.js ~ line 14 ~ data", data)
             if (data.error) {
                 setError(data.error)
             } else {
                 setVideogames(data);
                 console.log(data, "data paginas");
             }
-        })
+        }).catch(err => {
+            console.log(err);
+        });
     }
 
     useEffect(() => {
@@ -30,7 +33,7 @@ const Packs = () => {
             <div className="container">
                 <div className="row">
                     {videogames.map((videogame, i) => (
-                        <div key={i} className="col-lg-4 col-md-6 col-sm-6 col-sm-6">
+                        <div key={i} className="col-lg-3 col-md-3 col-sm-3 col-sm-3">
                             <Card videogame={videogame} />
                         </div>
                     ))}

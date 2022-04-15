@@ -5,7 +5,7 @@ const  Home = ()  => {
     return(
         <div>
             <Nav />
-            <h2>pagina principal </h2>
+            <h2>sera la pagina para imaginar</h2>
         </div>
     )
 }

@@ -1,23 +1,30 @@
 import { API } from '../src/config';
-import queryString from 'query-string'
 
 export const getVideogames = async () => {
   try {
-        const response = await fetch(
-            `${API}/pedido/pedidos`,
-            {
-                method: 'GET'
-            }
-        );
-        console.log(response);
-        return await response.json();
+    
+    let headers = new Headers();
+
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Origin','http://localhost:3000');
+    headers.append('GET', 'POST', 'OPTIONS');
+
+
+    const response = await fetch(`${API}/addTasks/list`, {
+        mode: 'cors',
+        method: 'GET',
+        headers: headers
+    })
+
+    return await response.json();
     } catch (err) {
         return console.log(err);
     }
 }
 
 export const read = (videogameId) => {
-  return fetch(`${API}/pedido/${videogameId}`, {
+  return fetch(`${API}/addTasks/${videogameId}`, {
     method: "GET"
   }).then(response => {
     return response.json();
